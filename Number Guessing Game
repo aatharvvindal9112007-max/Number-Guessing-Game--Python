@@ -1,0 +1,28 @@
+import random
+while True:
+    print ("\t THE NUMBER GUESSING GAME ")
+    Mood = input("Do you want to play (Yes/No) : ").lower()
+    if Mood != 'yes':
+     print ("You do not want to play")
+     break
+    else:
+     print ("Guess the number")
+     print ("It can range from -1000 to 1000 \n You will get hints")
+     num= random.choice(range(-1000,1001))
+     n1=0
+     while True:
+         n1+=1
+         n = int(input("Enter your Guess : " ))
+         if n==num:
+             print("Great")
+             break
+         elif n<num:
+             print ("It's Greater")
+         else :
+             print ("It's Smaller")
+     print("Total no of choices made is : ", n1)
+    re = input("Do you want to Replay it (Yes/no) : ").lower()
+    if re != 'yes':
+     print ("You do not want to Re play , Game Over")
+     break
+    
